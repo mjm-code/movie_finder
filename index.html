@@ -1,17 +1,133 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie Finder</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-        
-        <script src="my.js" async defer></script>
-    </body>
+<head>
+<title>Movie finder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: white;
+  font-family: Arial;
+}
+
+
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: rgb(10, 5, 10);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: rgb(218, 170, 40);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(245, 58, 58);
+  color: white;
+}
+
+
+
+
+/* Main */
+.main {
+  flex: 100%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+/* Button styling*/
+.my-button
+{
+background-color: rgb(218, 170, 40);
+color: black;
+text-align: center;
+text-decoration: none;
+display:inline-block;
+font-size:30px;
+padding: 10px 80px;
+}
+
+
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(247, 246, 246);
+  font-size:8px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="https://www.facebook.com/blondynkablog/">QandA</a>
+  <a href="https://www.instagram.com/blondynka_londynka/">What movies you can watch</a>
+  <a href="https://b-londynka.pl/">Terms and Conditions</a>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <h1><!-- Header -->
+    <div class="header">
+      <h1>Unlimited films, TV programmes and more.</h1>
+      <h2>Watch anywhere. You don't need any membership!</h2>
+      <h3>Ready? Type title of the movie and  sit, relax and enjoy.</h3>
+    </div>
+
+    
+    <input style="width:300px; height:60px;" data-names="Type movie" type="text" placeholder="Movie">
+
+
+    <button class="my-button">
+        Search
+    </button>
+
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>all copyright reserved</h2>
+</div>
+
+</body>
 </html>
+
+
