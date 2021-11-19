@@ -1,14 +1,18 @@
 //js code 
 
 //get Api key from http://www.omdbapi.com/ and paste it here
-const apiKey = '';
+var apiKey = '';
+
+//api key reminder
+if(!apiKey) apiKey = prompt('Please go to http://www.omdbapi.com/ and register to obtain api keys.\n Then paste it in my.js file or type your Omdbapi key here:');
 
 //declare results element as variable resultsSection
 const resultsSection = document.getElementById('results');
 
 //get users input from searchBar
-const searchFilm = (e) => {
+const searchFilm = () => {
     const userInput = document.getElementById('searchBar').value;
+    console.log(userInput);
     resultsSection.innerHTML = ' ';
     callApi(userInput);
 } 

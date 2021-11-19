@@ -101,18 +101,21 @@ padding: 10px 80px;
     </div>
 
     
-    <input style="width:300px; height:60px;" data-names="Type movie" type="text" placeholder="Movie">
+    <input 
+      style="width:300px; height:60px;" 
+      data-names="Type movie" 
+      type="text" 
+      placeholder="Movie" 
+      onkeyup="searchFilm()"
+      id="searchBar">
 
-
-    <button class="my-button">
+    <button  class="my-button" >
         Search
     </button>
 
 
 </div>
 
-<<<<<<< HEAD
-=======
 <!-- Results  -->
 <section id="results">
 
@@ -120,11 +123,12 @@ padding: 10px 80px;
 
 </section>
 
->>>>>>> ddf3777... comments added
 <!-- Footer -->
 <div class="footer">
   <h2>all copyright reserved</h2>
 </div>
+
+<script src="my.js" async defer> </script>
 
 </body>
 </html>
