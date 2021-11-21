@@ -15,6 +15,13 @@ body {
   margin: 0;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
 /* Header/logo Title */
 .header {
   padding: 20px;
@@ -50,16 +57,61 @@ body {
 /* Button styling*/
 .my-button
 {
+flex: 0.1;
 background-color: rgb(218, 170, 40);
 color: black;
 text-align: center;
 text-decoration: none;
 display:inline-block;
 font-size:30px;
-padding: 10px 80px;
+padding: 10px 15px;
+}
+
+#results {
+  list-style-type: none;
+  background-color: rgba(240, 248, 255, 0.87);
+  border-radius: 15px;
+  max-width: 75vw;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#results li {
+  display: flex;
+  flex-direction: row;
+  justify-content:  flex-start;
+  align-items: center;
+  color: black;
+  font-size: large;
+  padding: 5px 10px;
+  border: 1px solid black;  
+}
+
+#results li a { 
+  text-decoration: none;
+  flex: 1;
+}
+
+#results li img {
+ border-radius: 5px;
+}
+
+#results li a:visited {
+  color: black;
+}
+
+#results li:hover {
+  background-color: rgb(218, 170, 40);
+  cursor: pointer;
 }
 
 
+.searchDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 /* Footer */
@@ -75,6 +127,11 @@ padding: 10px 80px;
   .row, .navbar {   
     flex-direction: column;
   }
+
+  img {
+    max-width: 100px;
+    max-height: 150px;
+  }
 }
 </style>
 </head>
@@ -82,51 +139,61 @@ padding: 10px 80px;
 
 <body>
 
+  <div class="container">
 
-
-<!-- Navigation Bar -->
-<div class="navbar">
-  <a href="https://www.facebook.com/blondynkablog/">QandA</a>
-  <a href="https://www.instagram.com/blondynka_londynka/">What movies you can watch</a>
-  <a href="https://b-londynka.pl/">Terms and Conditions</a>
-</div>
-
-<!-- Header -->
-<div class="header">
-  <h1><!-- Header -->
-    <div class="header">
-      <h1>Unlimited films, TV programmes and more.</h1>
-      <h2>Watch anywhere. You don't need any membership!</h2>
-      <h3>Ready? Type title of the movie and  sit, relax and enjoy.</h3>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <a href="https://www.facebook.com/blondynkablog/">QandA</a>
+      <a href="https://www.instagram.com/blondynka_londynka/">What movies you can watch</a>
+      <a href="https://b-londynka.pl/">Terms and Conditions</a>
     </div>
 
-    
-    <input 
-      style="width:300px; height:60px;" 
-      data-names="Type movie" 
-      type="text" 
-      placeholder="Movie" 
-      onkeyup="searchFilm()"
-      id="searchBar">
+    <!-- Header -->
+    <div class="header">
+      <h1><!-- Header -->
+        <div class="header">
+          <h1>Unlimited films, TV programmes and more.</h1>
+          <h2>Watch anywhere. You don't need any membership!</h2>
+          <h3>Ready? Type title of the movie and  sit, relax and enjoy.</h3>
+        </div>
 
-    <button  class="my-button" >
-        Search
-    </button>
+      
+          <div class="searchDiv">
+            
+            <input 
+              style="height:60px; flex: 0.3; text-align: center;" 
+              data-names="Type movie" 
+              type="text" 
+              placeholder="Movie" 
+              onkeyup="searchFilm()"
+              id="searchBar">
+
+            <button  class="my-button" onclick="searchFilm()">
+                Search
+            </button>
+
+          </div>
+
+              <!-- Results  -->
+          <ul id="results">
+
+        
+
+          </ul>
+      
+
+    </div>
+
+   
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>all copyright reserved</h2>
+    </div>
 
 
-</div>
 
-<!-- Results  -->
-<section id="results">
-
-    <!-- TODO -->
-
-</section>
-
-<!-- Footer -->
-<div class="footer">
-  <h2>all copyright reserved</h2>
-</div>
+  </div>
 
 <script src="my.js" async defer> </script>
 
