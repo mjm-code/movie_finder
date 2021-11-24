@@ -13,6 +13,8 @@
 body {
   font-family: Arial;
   margin: 0;
+background: url('https://cdn.pixabay.com/photo/2014/10/16/09/15/lens-490806_960_720.jpg'); 
+background-size: auto;
 }
 
 .container{
@@ -26,7 +28,6 @@ body {
 .header {
   padding: 20px;
   text-align: center;
-  background: #000;
   color: white;
   font-family: Arial;
 }
@@ -64,8 +65,25 @@ text-align: center;
 text-decoration: none;
 display:inline-block;
 font-size:30px;
-padding: 10px 15px;
+padding: 10px 55px;
+transition-duration: 0.4s;
+margin-left:20px;  
 }
+
+
+/* Change color on hover */
+.my-button:hover {
+  background-color: rgb(245, 58, 58);
+  color: white;
+}
+
+
+
+
+
+
+
+
 
 #results {
   list-style-type: none;
@@ -127,11 +145,6 @@ padding: 10px 15px;
   .row, .navbar {   
     flex-direction: column;
   }
-
-  img {
-    max-width: 100px;
-    max-height: 150px;
-  }
 }
 </style>
 </head>
@@ -143,9 +156,9 @@ padding: 10px 15px;
 
     <!-- Navigation Bar -->
     <div class="navbar">
-      <a href="https://www.facebook.com/blondynkablog/">QandA</a>
-      <a href="https://www.instagram.com/blondynka_londynka/">What movies you can watch</a>
-      <a href="https://b-londynka.pl/">Terms and Conditions</a>
+      <a href="">QandA</a>
+      <a href="">What movies you can watch</a>
+      <a href="">Terms and Conditions</a>
     </div>
 
     <!-- Header -->
@@ -199,5 +212,4 @@ padding: 10px 15px;
 
 </body>
 </html>
-
 
