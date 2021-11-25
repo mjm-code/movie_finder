@@ -3,6 +3,7 @@
 //get Api key from http://www.omdbapi.com/ and paste it here
 var apiKey = '';
 var movies;
+var mainBox = document.getElementById('mainBox');
 
 //api key reminder
 if(!apiKey) apiKey = prompt('Please head to http://www.omdbapi.com/ and register to obtain api keys.\n Then paste it in my.js file or type your Omdbapi key here:');
@@ -19,6 +20,7 @@ const searchFilm = () => {
 
 //call endpoint to get movies data 
 const callApi = (title) => {
+    if(!apiKey) alert('There is a problem with your API key!');
     fetch(`http://www.omdbapi.com/?s=${title}&apikey=${apiKey}`)
     .then( res => res.json() )
     .then( 
@@ -80,8 +82,10 @@ const detailedCard = (m) => {
         el.position = 'absolute';
         el.top = '0';
         el.left= '0';
-        el.minWidth = '75vw';
-        el.minHeight = '500px';
+        // el.margin= '5px 5px 5px 0px';
+        el.width = '100%';
+        el.height = '100%';
+        el.maxWidth = '800px';
         el.backgroundImage = `url('${m.Poster}')`;
         el.backgroundSize = '75vw 80vh';
         el.filter= 'blur(50px)';
@@ -149,5 +153,11 @@ const detailedCard = (m) => {
     card.appendChild(body);
 
     return card;
+}
+
+
+const goToPage = (e, id) => {
+    e.preventDefault();
+    mainBox.innerHTML = `<h1> ${id} </h1><div class="header"><h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </h4></div>`;
 }
 

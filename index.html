@@ -97,7 +97,7 @@ margin-left:20px;
   color: black;
   font-size: large;
   padding: 5px 10px;
-  /* border: 1px solid black;   */
+  border: 1px solid black;  
 }
 
 #results li a { 
@@ -132,6 +132,11 @@ margin-left:20px;
   text-align: center;
   background: rgb(247, 246, 246);
   font-size:8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -150,13 +155,14 @@ margin-left:20px;
 
     <!-- Navigation Bar -->
     <div class="navbar">
-      <a href="">QandA</a>
-      <a href="">What movies you can watch</a>
-      <a href="">Terms and Conditions</a>
+      <a href="">Home</a>
+      <a href="" onclick="goToPage(event, 'QandA')">QandA</a>
+      <a href="" onclick="goToPage(event, 'What movies you can watch')">What movies you can watch</a>
+      <a href="" onclick="goToPage(event, 'Terms and Conditions')">Terms and Conditions</a>
     </div>
 
     <!-- Header -->
-    <div class="header">
+    <div class="header" id="mainBox">
       <h1><!-- Header -->
         <div class="header">
           <h1>Unlimited films, TV programmes and more.</h1>
