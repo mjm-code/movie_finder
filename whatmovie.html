@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie finder - What movie</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+background-color: black; 
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: center;
+  color: rgb(240, 62, 62);
+  font-family: Arial;
+}
+
+ 
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: rgb(10, 5, 10);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: rgb(218, 170, 40);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(245, 58, 58);
+  color: white;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgb(247, 246, 246);
+  font-size:8px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+
+      <a href="qanda.html">QandA</a>
+      <a href="whatmovie.html">What movies you can watch</a>
+      <a href="terms.html">Terms and Conditions</a>
+    </div>
+
+
+    <h1 class="header">You can watch whatever you want. We have all movies from the whole world!</h1>
+  
+<img style="width:1000px; height:800px; margin-left: 180px;" src="https://media3.giphy.com/media/QXPmPdudTz4So2P4OQ/giphy.gif?cid=790b76113d7e588767aa1522c651632e71ce486c4dcf8204&rid=giphy.gif&ct=g"/>
+
+
+
+   
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2>all copyright reserved</h2>
+    </div>
+
+
+
+  </div>
+
+</body>
+</html>
+
