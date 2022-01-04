@@ -6,7 +6,7 @@ var movies;
 var mainBox = document.getElementById('mainBox');
 
 //api key reminder
-if(!apiKey) apiKey = prompt('Please head to http://www.omdbapi.com/ and register to obtain api keys.\n Then paste it in my.js file or type your Omdbapi key here:');
+if(!apiKey) apiKey = prompt('Please head to https://www.omdbapi.com/ and register to obtain api keys.\n Then paste it in my.js file or type your Omdbapi key here:');
 
 //declare results element as variable resultsSection
 const resultsSection = document.getElementById('results');
